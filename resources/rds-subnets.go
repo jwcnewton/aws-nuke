@@ -4,7 +4,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/rds"
-	"github.com/rebuy-de/aws-nuke/v2/pkg/types"
+	"github.com/instruqt/aws-nuke/v3/pkg/types"
 )
 
 type RDSDBSubnetGroup struct {
@@ -28,12 +28,12 @@ func ListRDSSubnetGroups(sess *session.Session) ([]Resource, error) {
 	var resources []Resource
 	for _, subnetGroup := range resp.DBSubnetGroups {
 		tags, err := svc.ListTagsForResource(&rds.ListTagsForResourceInput{
-                        ResourceName: subnetGroup.DBSubnetGroupArn,
-                })
+			ResourceName: subnetGroup.DBSubnetGroupArn,
+		})
 
-                if err != nil {
-                        continue
-                }
+		if err != nil {
+			continue
+		}
 
 		resources = append(resources, &RDSDBSubnetGroup{
 			svc:  svc,
@@ -64,12 +64,12 @@ func (i *RDSDBSubnetGroup) String() string {
 }
 
 func (i *RDSDBSubnetGroup) Properties() types.Properties {
-        properties := types.NewProperties()
-        properties.Set("Name", i.name)
+	properties := types.NewProperties()
+	properties.Set("Name", i.name)
 
-        for _, tag := range i.tags {
-                properties.SetTag(tag.Key, tag.Value)
-        }
+	for _, tag := range i.tags {
+		properties.SetTag(tag.Key, tag.Value)
+	}
 
-        return properties
+	return properties
 }

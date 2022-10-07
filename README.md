@@ -1,15 +1,15 @@
 # aws-nuke
 
-![Build Status](https://github.com/rebuy-de/aws-nuke/workflows/Golang%20CI/badge.svg?branch=main)
-[![license](https://img.shields.io/github/license/rebuy-de/aws-nuke.svg)](https://github.com/rebuy-de/aws-nuke/blob/main/LICENSE)
-[![GitHub release](https://img.shields.io/github/release/rebuy-de/aws-nuke.svg)](https://github.com/rebuy-de/aws-nuke/releases)
+![Build Status](https://github.com/instruqt/aws-nuke/workflows/Golang%20CI/badge.svg?branch=main)
+[![license](https://img.shields.io/github/license/rebuy-de/aws-nuke.svg)](https://github.com/instruqt/aws-nuke/blob/main/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/rebuy-de/aws-nuke.svg)](https://github.com/instruqt/aws-nuke/releases)
 [![Docker Hub](https://img.shields.io/docker/pulls/rebuy/aws-nuke)](https://hub.docker.com/r/rebuy/aws-nuke)
 
 Remove all resources from an AWS account.
 
 > **Development Status** *aws-nuke* is stable, but it is likely that not all AWS
 resources are covered by it. Be encouraged to add missing resources and create
-a Pull Request or to create an [Issue](https://github.com/rebuy-de/aws-nuke/issues/new).
+a Pull Request or to create an [Issue](https://github.com/instruqt/aws-nuke/issues/new).
 
 ## Caution!
 
@@ -66,7 +66,7 @@ We usually release a new version once enough changes came together and have
 been tested for a while.
 
 You can find Linux, macOS and Windows binaries on the
-[releases page](https://github.com/rebuy-de/aws-nuke/releases), but we also
+[releases page](https://github.com/instruqt/aws-nuke/releases), but we also
 provide containerized versions on [quay.io/rebuy/aws-nuke](https://quay.io/rebuy/aws-nuke)
 and [docker.io/rebuy/aws-nuke](https://hub.docker.com/r/rebuy/aws-nuke). Both
 are available for multiple architectures (amd64, arm64 & armv7).
@@ -604,12 +604,12 @@ presets:
 ### Use Released Binaries
 
 The easiest way of installing it, is to download the latest
-[release](https://github.com/rebuy-de/aws-nuke/releases) from GitHub.
+[release](https://github.com/instruqt/aws-nuke/releases) from GitHub.
 
 #### Example for Linux Intel/AMD
 
 Download and extract
-`$ wget -c https://github.com/rebuy-de/aws-nuke/releases/download/v2.16.0/aws-nuke-v2.16.0-linux-amd64.tar.gz -O - | sudo tar -xz -C $HOME/bin`
+`$ wget -c https://github.com/instruqt/aws-nuke/releases/download/v2.16.0/aws-nuke-v2.16.0-linux-amd64.tar.gz -O - | sudo tar -xz -C $HOME/bin`
 
 Run
 `$ aws-nuke-v2.16.0-linux-amd64`

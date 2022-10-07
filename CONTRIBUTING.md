@@ -14,7 +14,7 @@ AWS services. Otherwise it would be a fulltime job to keep up with AWS.
 If a resource is not yet supported by *aws-nuke*, you have two options to
 resolve this:
 
-* File [an issue](https://github.com/rebuy-de/aws-nuke/issues/new) and describe
+* File [an issue](https://github.com/instruqt/aws-nuke/issues/new) and describe
   which resource is missing. This way someone can take care of it.
 * Add the resource yourself and open a Pull Request. Please follow the
   guidelines below to see how to create such a resource.
@@ -35,7 +35,7 @@ Please check the following points before creating a bug issue:
   are separated by lines starting with `Removal requested: ` and only the
   errors in the last block indicate actual errros.
 
-File [an issue](https://github.com/rebuy-de/aws-nuke/issues/new) and describe
+File [an issue](https://github.com/instruqt/aws-nuke/issues/new) and describe
 as accurately as possible how to generate the resource on AWS that cause the
 errors in *aws-nuke*. Ideally this is provided in a reproducible way like
 a Terraform template or AWS CLI commands.
@@ -45,10 +45,10 @@ a Terraform template or AWS CLI commands.
 
 You should take these steps if you have an idea how to improve *aws-nuke*:
 
-1. Check the [issues page](https://github.com/rebuy-de/aws-nuke/issues),
+1. Check the [issues page](https://github.com/instruqt/aws-nuke/issues),
    whether someone already had the same or a similar idea.
 2. Also check the [closed
-   issues](https://github.com/rebuy-de/aws-nuke/issues?utf8=%E2%9C%93&q=is%3Aissue),
+   issues](https://github.com/instruqt/aws-nuke/issues?utf8=%E2%9C%93&q=is%3Aissue),
    because this might have already been implemented, but not yet released. Also
    the idea might not be viable for unobvious reasons.
 3. Join the discussion, if there is already an related issue. If this is not

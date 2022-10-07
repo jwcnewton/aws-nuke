@@ -4,7 +4,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/costandusagereportservice"
-	"github.com/rebuy-de/aws-nuke/v2/pkg/types"
+	"github.com/instruqt/aws-nuke/v3/pkg/types"
 )
 
 func init() {
@@ -39,11 +39,11 @@ func ListBillingCostandUsageReports(sess *session.Session) ([]Resource, error) {
 	resources := []Resource{}
 	for _, report := range reports {
 		resources = append(resources, &BillingCostandUsageReport{
-			svc:         svc,
-			reportName:  report.ReportName,
-			s3Bucket:    report.S3Bucket,
-			s3Prefix:    report.S3Prefix,
-			s3Region:    report.S3Region,
+			svc:        svc,
+			reportName: report.ReportName,
+			s3Bucket:   report.S3Bucket,
+			s3Prefix:   report.S3Prefix,
+			s3Region:   report.S3Region,
 		})
 	}
 
