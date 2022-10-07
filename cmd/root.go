@@ -159,7 +159,9 @@ func NewRootCommand() *cobra.Command {
 	command.PersistentFlags().BoolVarP(
 		&params.Quiet, "quiet", "q", false,
 		"Don't show filtered resources.")
-
+	command.PersistentFlags().BoolVarP(
+		&params.RequireAlias, "require-alias", "", true,
+		"Don't require alias to be present when wiping acccount.")
 	command.AddCommand(NewVersionCommand())
 	command.AddCommand(NewResourceTypesCommand())
 

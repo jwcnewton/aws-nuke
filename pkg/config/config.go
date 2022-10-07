@@ -112,7 +112,7 @@ func (c *Nuke) InBlocklist(searchID string) bool {
 	return false
 }
 
-func (c *Nuke) ValidateAccount(accountID string, aliases []string) error {
+func (c *Nuke) ValidateAccount(accountID string, aliases []string, requireAlias bool) error {
 	if !c.HasBlocklist() {
 		return fmt.Errorf("The config file contains an empty blocklist. " +
 			"For safety reasons you need to specify at least one account ID. " +
@@ -124,7 +124,7 @@ func (c *Nuke) ValidateAccount(accountID string, aliases []string) error {
 			"but it is blocklisted. Aborting.", accountID)
 	}
 
-	if len(aliases) == 0 {
+	if requireAlias && len(aliases) == 0 {
 		return fmt.Errorf("The specified account doesn't have an alias. " +
 			"For safety reasons you need to specify an account alias. " +
 			"Your production account should contain the term 'prod'.")

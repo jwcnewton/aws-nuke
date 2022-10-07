@@ -40,7 +40,7 @@ func (n *Nuke) Run() error {
 
 	fmt.Printf("aws-nuke version %s - %s - %s\n\n", BuildVersion, BuildDate, BuildHash)
 
-	err = n.Config.ValidateAccount(n.Account.ID(), n.Account.Aliases())
+	err = n.Config.ValidateAccount(n.Account.ID(), n.Account.Aliases(), n.Parameters.RequireAlias)
 	if err != nil {
 		return err
 	}
