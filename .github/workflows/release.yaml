@@ -22,17 +22,11 @@ jobs:
         CGO_ENABLED: 0
       run: |
         make xc
-    - name: List Out Files
-      run: |
-        ls ./
-    - name: List Out Files
-      run: |
-        ls dist
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: dist/aws*
+        file: dist/*
         tag: ${{ github.ref }}
         overwrite: true
         file_glob: true
