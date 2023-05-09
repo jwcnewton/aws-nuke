@@ -46,13 +46,13 @@ func (n *Nuke) Run() error {
 	}
 
 	fmt.Printf("Do you really want to nuke the account with "+
-		"the ID %s and the alias '%s'?\n", n.Account.ID(), n.Account.Alias())
+		"the ID %s?\n", n.Account.ID())
 	if n.Parameters.Force {
 		fmt.Printf("Waiting %v before continuing.\n", forceSleep)
 		time.Sleep(forceSleep)
 	} else {
-		fmt.Printf("Do you want to continue? Enter account alias to continue.\n")
-		err = Prompt(n.Account.Alias())
+		fmt.Printf("Do you want to continue? Enter account ID to continue.\n")
+		err = Prompt(n.Account.ID())
 		if err != nil {
 			return err
 		}
@@ -74,13 +74,13 @@ func (n *Nuke) Run() error {
 	}
 
 	fmt.Printf("Do you really want to nuke these resources on the account with "+
-		"the ID %s and the alias '%s'?\n", n.Account.ID(), n.Account.Alias())
+		"the ID ?\n", n.Account.ID())
 	if n.Parameters.Force {
 		fmt.Printf("Waiting %v before continuing.\n", forceSleep)
 		time.Sleep(forceSleep)
 	} else {
-		fmt.Printf("Do you want to continue? Enter account alias to continue.\n")
-		err = Prompt(n.Account.Alias())
+		fmt.Printf("Do you want to continue? Enter account ID to continue.\n")
+		err = Prompt(n.Account.ID())
 		if err != nil {
 			return err
 		}
