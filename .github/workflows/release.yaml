@@ -42,7 +42,7 @@ jobs:
 
     - name: Generate image tags
       shell: bash
-      run: echo "##[set-output name=tags;]quay.io/rebuy/aws-nuke:${GITHUB_REF#refs/tags/},docker.io/rebuy/aws-nuke:${GITHUB_REF#refs/tags/}"
+      run: echo "##[set-output name=tags;]docker.io/jwcnewton/aws-nuke:${GITHUB_REF#refs/tags/}"
       id: generate_tags
 
     - name: Set up QEMU
