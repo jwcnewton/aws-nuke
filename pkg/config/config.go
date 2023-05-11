@@ -124,19 +124,6 @@ func (c *Nuke) ValidateAccount(accountID string, aliases []string, requireAlias 
 			"but it is blocklisted. Aborting.", accountID)
 	}
 
-	if requireAlias && len(aliases) == 0 {
-		return fmt.Errorf("The specified account doesn't have an alias. " +
-			"For safety reasons you need to specify an account alias. " +
-			"Your production account should contain the term 'prod'.")
-	}
-
-	for _, alias := range aliases {
-		if strings.Contains(strings.ToLower(alias), "prod") {
-			return fmt.Errorf("You are trying to nuke an account with the alias '%s', "+
-				"but it has the substring 'prod' in it. Aborting.", alias)
-		}
-	}
-
 	if _, ok := c.Accounts[accountID]; !ok {
 		return fmt.Errorf("Your account ID '%s' isn't listed in the config. "+
 			"Aborting.", accountID)
