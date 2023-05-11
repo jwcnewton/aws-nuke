@@ -7,7 +7,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/service/cloudformation"
 	"github.com/golang/mock/gomock"
-	"github.com/instruqt/aws-nuke/v3/mocks/mock_cloudformationiface"
+	"github.com/jwcnewton/aws-nuke/v3/mocks/mock_cloudformationiface"
 	"github.com/stretchr/testify/assert"
 )
 

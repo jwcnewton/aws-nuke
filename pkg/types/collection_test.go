@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/instruqt/aws-nuke/v3/pkg/types"
+	"github.com/jwcnewton/aws-nuke/v3/pkg/types"
 )
 
 func TestSetInterset(t *testing.T) {

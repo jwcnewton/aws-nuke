@@ -14,7 +14,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3control"
-	"github.com/instruqt/aws-nuke/v3/pkg/config"
+	"github.com/jwcnewton/aws-nuke/v3/pkg/config"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -228,7 +228,7 @@ func skipGlobalHandler(global bool) func(r *request.Request) {
 		if service == s3control.ServiceName {
 			service = s3control.EndpointsID
 			// Rewrite S3 Control ServiceName to proper EndpointsID
-			// https://github.com/instruqt/aws-nuke/issues/708
+			// https://github.com/jwcnewton/aws-nuke/issues/708
 		}
 		rs, ok := endpoints.RegionsForService(endpoints.DefaultPartitions(), DefaultAWSPartitionID, service)
 		if !ok {

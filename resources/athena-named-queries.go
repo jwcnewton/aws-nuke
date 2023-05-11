@@ -3,7 +3,7 @@ package resources
 import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/athena"
-	"github.com/instruqt/aws-nuke/v3/pkg/types"
+	"github.com/jwcnewton/aws-nuke/v3/pkg/types"
 )
 
 func init() {

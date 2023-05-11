@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/instruqt/aws-nuke/v3/pkg/types"
+	"github.com/jwcnewton/aws-nuke/v3/pkg/types"
 )
 
 func TestConfigBlocklist(t *testing.T) {

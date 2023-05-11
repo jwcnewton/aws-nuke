@@ -6,8 +6,8 @@ import (
 	"sort"
 
 	"github.com/aws/aws-sdk-go/aws/endpoints"
-	"github.com/instruqt/aws-nuke/v3/pkg/awsutil"
-	"github.com/instruqt/aws-nuke/v3/pkg/config"
+	"github.com/jwcnewton/aws-nuke/v3/pkg/awsutil"
+	"github.com/jwcnewton/aws-nuke/v3/pkg/config"
 	"github.com/jwcnewton/aws-nuke/v3/resources"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"

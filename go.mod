@@ -1,4 +1,4 @@
-module github.com/instruqt/aws-nuke/v3
+module github.com/jwcnewton/aws-nuke/v3
 
 go 1.19
 

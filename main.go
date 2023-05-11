@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/instruqt/aws-nuke/v3/cmd"
+	"github.com/jwcnewton/aws-nuke/v3/cmd"
 )
 
 func main() {

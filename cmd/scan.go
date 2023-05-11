@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"runtime/debug"
 
-	"github.com/instruqt/aws-nuke/v3/pkg/awsutil"
-	"github.com/instruqt/aws-nuke/v3/pkg/util"
+	"github.com/jwcnewton/aws-nuke/v3/pkg/awsutil"
+	"github.com/jwcnewton/aws-nuke/v3/pkg/util"
 	"github.com/jwcnewton/aws-nuke/v3/resources"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/sync/semaphore"
