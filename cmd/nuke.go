@@ -7,7 +7,7 @@ import (
 	"github.com/instruqt/aws-nuke/v3/pkg/awsutil"
 	"github.com/instruqt/aws-nuke/v3/pkg/config"
 	"github.com/instruqt/aws-nuke/v3/pkg/types"
-	"github.com/instruqt/aws-nuke/v3/resources"
+	"github.com/jwcnewton/aws-nuke/v3/resources"
 	"github.com/sirupsen/logrus"
 )
 

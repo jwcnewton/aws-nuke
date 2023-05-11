@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/fatih/color"
-	"github.com/instruqt/aws-nuke/v3/resources"
+	"github.com/jwcnewton/aws-nuke/v3/resources"
 )
 
 var (
